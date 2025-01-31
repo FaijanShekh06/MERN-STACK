@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Styles</title>
+    <link rel="stylesheet" href="02_link.html">
+</head>
+
+<body>
+    <div class="container">
+        <div class="link-box">
+            <div class="link-item">
+                <a href="#" class="link">
+                    <p class="description">x This is a link without a link</p>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="#" target="_blank" class="link">
+                    <p class="description">x This is a link without a link with target blank</p>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="#" target="_blank" rel="noopener" class="link">
+                    <p class="description">✓ This is a link with a link with target blank and noopener</p>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://www.example.com" class="link">
+                    <p class="description">✓ This is a default link</p>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="/internal-page" class="link">
+                    <p class="description">✓ This is an internal link</p>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://www.google.com" class="link">
+                    <p class="description">✓ This is external</p>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="#" target="_blank" class="link">
+                    <p class="description">x External link without noopener with target blank</p>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="link">
+                    <p class="description">✓ External in new window like it should be</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-item {
+    padding: 15px;
+    border-radius: 20px;
+    /* Rounded corners */
+    background-color: #e6f2ff;
+    /* Light blue */
+    border: 1px solid #d1e0e8;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.link-item:nth-child(2n) {
+    /* Alternate background color */
+    background-color: #ffe6f2;
+    /* Light pink */
+}
+
+.link-item:nth-child(3n) {
+    /* Alternate background color */
+    background-color: #e6ffe6;
+    /* Light green */
+}
+
+.link-item:nth-child(4n) {
+    /* Alternate background color */
+    background-color: #ffffcc;
+    /* Light yellow */
+}
+
+.link-item:nth-child(5n) {
+    /* Alternate background color */
+    background-color: #d5e8d4;
+    /* Light olive green */
+}
+
+.link-item:nth-child(6n) {
+    /* Alternate background color */
+    background-color: #bfe0ff;
+    /* Light sky blue */
+}
+
+.link-item:nth-child(7n) {
+    /* Alternate background color */
+    background-color: #ffc0cb;
+    /* Light pink */
+}
+
+.link-item:nth-child(8n) {
+    /* Alternate background color */
+    background-color: #dda0dd;
+    /* Light purple */
+}
+
+.link-item:hover {
+    background-color: #cce5ff;
+    /* Darker blue on hover */
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    /* Dark gray text color */
+    display: block;
+    /* Make the entire link-item clickable */
+}
+
+.description {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    /* Vertically center icon and text */
+}
+
+.description::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    /* Align icon with text baseline */
+}
+
+.description[data-status="success"]::before {
+    background-image: url('checkmark.png');
+}
+
+.description[data-status="error"]::before {
+    background-image: url('cross.png');
+}

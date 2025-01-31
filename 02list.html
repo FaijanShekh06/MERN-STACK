@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordered and Unordered Lists</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            gap: 20px;
+        }
+        
+        .list-container {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .list-group {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            /* Remove default padding for ol/ul */
+            margin: 0;
+            /* Remove default margin for ol/ul */
+        }
+        
+        ol,
+        ul {
+            list-style: ;
+            /* Remove default bullet/number styles */
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background-color: #fff;
+        }
+        
+        li:last-child {
+            border-bottom: none;
+        }
+        
+        .sub-item {
+            background-color: #f0f0f0;
+            padding-left: 30px;
+        }
+        /* Style for ordered lists (ol) */
+        
+        ol li::before {
+            content: counter(list-item) ". ";
+            /* Add counter value and a dot */
+            counter-increment: list-item;
+            /* Increment the counter */
+            margin-right: 10px;
+            color: #3498db;
+            /* Blue */
+            font-weight: bold;
+        }
+        /* Reset counter for each ordered list */
+        
+        ol {
+            counter-reset: list-item;
+        }
+        /* Style for unordered lists (ul) */
+        
+        ul li::before {
+            content: "• ";
+            /* Add a bullet */
+            margin-right: 10px;
+            color: #e74c3c;
+            /* Red */
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list-container">
+        <div class="list-group">
+            <ol>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <ol>
+                    <li class="sub-item">List Sub Item</li>
+                </ol>
+
+            </ol>
+        </div>
+        <div class="list-group">
+            <ol>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <ol>
+                    <li class="sub-item">List Sub Item</li>
+                </ol>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
